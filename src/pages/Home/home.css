@@ -169,6 +169,7 @@
     cursor: pointer;
     transition: background 0.2s ease;
     position: relative;
+    margin-top: 40px;
 }
 
 .new-column-clickable {
