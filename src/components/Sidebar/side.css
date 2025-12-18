@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.kabContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    background-color: var(--board-bg);
+    color: var(--text);
+    padding: 0 20px;
+}
+
+.logo {    
+    color: #8A87D5;       
+}
+
+.kabLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.kabLogo h2 {
+    font-weight: bold;
+    font-size: 28px; 
+    color: var(--text);
+}
+
+.sidebarItems {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 15px; 
+}
+
+.sidebarItems h3:first-child {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.sidebarItems a {
+    text-decoration: none;
+}
+
+.sidebarItems a h3{
+    color: var(--primary) !important;
+}
+
+.sidebarIcon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.sidebarIcon h3 {
+    font-weight: 600; 
+    font-size: 16px; 
+    color: var(--text);
+}
+
+.sidebarIcon:hover {
+    background-color: rgba(99, 95, 199, 0.1); 
+}
+
+.sidebarIcon:hover h3 {
+    color: var(--primary); 
+}
+
+.kabToggleAndHide {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto; 
+    gap: 20px;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.toggling {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-primary, #f4f7fd);
+    padding: 14px 20px;
+    border-radius: 8px;
+}
+
+[data-theme="dark"] .toggling {
+    background-color: #20212c;
+}
+
+.sun, .moon, .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 14px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.hide:hover {
+    background-color: rgba(99, 95, 199, 0.1);
+}
+
+.hide:hover h3 {
+    color: var(--primary);
+}
+
+.hide h3 {
+    font-weight: 500; 
+    font-size: 14px; 
+    color: var(--text);
+}
+
+.sidebarIcon.button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 16px 10px 0; 
+    margin-left: -20px;
+    padding-left: 20px;
+    border-radius: 0 50px 50px 0; 
+    background-color: var(--primary); 
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebarIcon.button h3 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff; 
+}
+
+.openSidebarBtn {
+  position: fixed;
+  left: 24px;
+  bottom: 32px;
+  width: 48px;
+  height: 48px;
+  background-color: #635fc7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .kabContainer {
+    padding: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .kabLogo {
+    margin-top: 16px;
+  }
+
+  .sidebarItems {
+    margin-top: 24px;
+  }
+
+  .kabToggleAndHide {
+    margin-bottom: 16px;
+    padding: 16px 0;
+  }
+}
